@@ -1,8 +1,10 @@
-describe('Array', function(){
-  describe('#indexOf()', function(){
-    it('should return -1 when the value is not present', function(){
-      [1,2,3].indexOf(5).should.equal(-1);
-      [1,2,3].indexOf(0).should.equal(-1);
-    })
-  })
-})
+var sort = require('../');
+
+describe('Selection Sort', function () {
+  it('should sort the array correctly', function () {
+    var original = [3, 2, 1];
+    var sorted = sort.Selection(original);
+    var expected = [1, 2, 3];
+    sorted.should.eql(expected);
+  });
+});
