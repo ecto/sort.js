@@ -28,3 +28,18 @@ Sort.Insertion = function (arr) {
     }
   }
 };
+
+Sort.Shell = function (arr) {
+  var n = arr.length;
+  var h = 1;
+  while (h < n / 3) {
+    h = 3 * h + 1;
+  }
+  while (h >= 1) {
+    for (var i = h; i < n; i++) {
+      for (var j = i; j >= h && arr[j] < arr[j - h]; j -= h) {
+        this.exchange(arr, j, j - h);
+      }
+    }
+  }
+};
