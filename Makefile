@@ -1,5 +1,5 @@
 test:
-	mocha --reporter list
+	mocha -r should --reporter list
 
 bench:
 	node tests/bench
