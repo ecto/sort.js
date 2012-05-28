@@ -55,31 +55,4 @@ Sort.Shell = function (arr) {
 };
 
 Sort.Merge = function (arr, low, mid, high) {
-  low = low || 0;
-  high = high || arr.length - 1;
-  mid = mid || Math.ceil(high / 2);
-  console.log(low, mid, high);
-
-  var aux = [];
-  var i = low;
-  var j = mid + 1;
-  var k;
-
-  for (k = low; k <= high; k++) {
-    aux[k] = arr[k];
-  }
-
-  for (k = low; k <= high; k++) {
-    if (i > mid) {
-      arr[k] = aux[j++];
-    } else if (j > high) {
-      arr[k] = aux[i++];
-    } else if (aux[j] < aux[i]) {
-      arr[k] = aux[j++];
-    } else {
-      arr[k] = aux[i++];
-    }
-  }
-
-  return arr;
 };
